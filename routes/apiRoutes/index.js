@@ -9,7 +9,7 @@ router.get("/notes", (req, res) => {
 })
 
 router.post("/notes", (req, res) => {
-    req.bpdy.id = uuidv4();
+    req.body.id = uuidv4();
     let newNote = createNewNote(req.body, notes);
     res.json(newNote);
 })
